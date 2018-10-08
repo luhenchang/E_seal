@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebView</title>
+    <script src="jquery-1.11.3/jquery-1.11.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btn").click(function () {
+                var str="";
+                str+= $("#input").val() + " "+$(":radio[name='sex']:checked").val();
+                if (window.imoocLauncher){
+                    imoocLauncher.setValue(str);
+                } else {
+                    alert("imoocLauncher is not found!!!");
+                }
+            })
+        });
+
+    </script>
+
+</head>
+<body>
+<!--<div><span>请输入要传递的值：</span><input type="text" id="input"></div>-->
+<!--<div id="btn"><span class="btn">点击</span></div>-->
+<form>
+    <!--<h1>用户登陆</h1>-->
+    <!--<h2>请填写注册信息</h2>-->
+    姓名：<input type="text" name="userName" id="input"><br>
+    性别：<input type="radio" name="sex" value="男" id="sex">男
+    <input type="radio" name="sex" value="女">女
+    <!--&lt;!&ndash;<br>&ndash;&gt;-->
+    <!--&lt;!&ndash;出身日期：<input type="text" name="age" >&ndash;&gt;-->
+    <!--&lt;!&ndash;<br>&ndash;&gt;-->
+    <!--&lt;!&ndash;电子邮箱：<input type="text" name="email">&ndash;&gt;-->
+    <!--&lt;!&ndash;<br>&ndash;&gt;-->
+    <!--&lt;!&ndash;地址：<select name="sheng">&ndash;&gt;-->
+    <!--&lt;!&ndash;<option value="广东">广东</option>&ndash;&gt;-->
+    <!--&lt;!&ndash;<option value="广西">广西</option>&ndash;&gt;-->
+    <!--&lt;!&ndash;<option value="云南">云南</option>&ndash;&gt;-->
+    <!--&lt;!&ndash;<option value="其他">其他</option>&ndash;&gt;-->
+    <!--&lt;!&ndash;</select><br>&ndash;&gt;-->
+</form>
+<input type="submit"  value="确定" id="btn">
+
+</body>
+</html>
